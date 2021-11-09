@@ -12,7 +12,10 @@ import 'package:news_app/shared//network/remote/dio_helper.dart';
 
 
 class NewsCubit extends Cubit<NewsStates> {
-  NewsCubit() : super(NewsInetialState());
+  late DioHelper dioHelper;
+  NewsCubit() : super(NewsInetialState()){
+    dioHelper= DioHelper();
+  }
 
   static NewsCubit get(context) => BlocProvider.of(context);
 

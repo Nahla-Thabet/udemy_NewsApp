@@ -34,6 +34,7 @@ Widget defaultFormField({
             : null,
       ),
       validator: validate,
+      onChanged: onChange,
       onTap: onTap,
       readOnly: readOnly,
     );
